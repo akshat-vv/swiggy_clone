@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Shimmer = () => {
+export const ShimmerCard = () => {
   return (
     <>
     {
@@ -20,4 +20,19 @@ const Shimmer = () => {
   )
 }
 
-export default Shimmer
+export const ShimmerCircle = () => {
+  return (
+    <>
+      {
+        Array(8).fill("").map(() => (
+          <div className='animate-bounce flex justify-around m-4'>
+            <div className='bg-gray-200 rounded-full w-20 h-20'>
+
+            </div>
+          </div>
+
+        ))
+      }
+    </>
+  )
+}

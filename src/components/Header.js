@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <div className='p-4 flex justify-between bg-gray-100 shadow-lg'>
-      <div className="logo">
+    <div className='p-4  bg-gray-100 shadow-lg'>
+      <div className="flex justify-between container-lg">
+        <div className="logo text-orange-500 font-extrabold text-lg">
           Swiggy
       </div>
       <div className="">
@@ -16,6 +17,7 @@ const Header = () => {
           <Link to="/cart"><li>Cart</li></Link>
           </ul>
       </div>
+    </div>
     </div>
   )
 }

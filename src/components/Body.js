@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Banner from './Banner';
 import RestaurantCard from './RestaurantCard';
-import Shimmer from './Shimmer';
+import { ShimmerCard, ShimmerCircle } from './Shimmer';
 
 const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
@@ -20,15 +20,16 @@ const Body = () => {
   }
 
   return (
-    <div className='flex flex-col p-4'>
-      {banner.length > 0 &&
-        < div className=' mb-4 rounded-m flex justify-around' >
-          <Banner banner={banner} />
-        </div>
-      }
-      <div className='flex flex-wrap justify-between gap-3'>
+    <div className='container-sm flex flex-col p-4'>
+      < div className=' mb-4 rounded-m flex justify-around' >
+        {banner?.length === 0 ? <ShimmerCircle /> :
 
-        {allRestaurants?.length === 0 ? <Shimmer /> :
+          <Banner banner={banner} />
+        }
+      </div>
+      <div className='flex flex-wrap gap-4 pl-6'>
+
+        {allRestaurants?.length === 0 ? <ShimmerCard /> :
           allRestaurants?.map((restaurant) => {
             return <RestaurantCard {...restaurant.info} />
           })
