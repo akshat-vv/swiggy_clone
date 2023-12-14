@@ -23,12 +23,12 @@ const App = () => {
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/swiggy_clone',
     element: <App />,
     errorElement: <Error />,
     children: [
       {
-        path:"",
+        path: "",
         element:<Body/>
       },
       {

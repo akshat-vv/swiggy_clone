@@ -11,10 +11,10 @@ const Header = () => {
       </div>
       <div className="">
           <ul className="flex gap-10">
-          <Link to="/"><li>Home</li></Link>
-          <Link to="/about"><li>About</li></Link>
-          <Link to="/contact"><li>Contact Us</li></Link>
-          <Link to="/cart"><li>Cart</li></Link>
+            <Link to="/swiggy_clone"><li>Home</li></Link>
+            <Link to="/swiggy_clone/about"><li>About</li></Link>
+            <Link to="/swiggy_clone/contact"><li>Contact Us</li></Link>
+            <Link to="/swiggy_clone/cart"><li>Cart</li></Link>
           </ul>
       </div>
     </div>
